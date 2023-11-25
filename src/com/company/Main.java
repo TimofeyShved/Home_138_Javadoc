@@ -1,54 +1,59 @@
 package com.company;
 
-/*
-* <h1>Это мой главный класс, я буду писать в нём код</h1>
+/**
+ *
+* <h1>Eto moy glavniy class</h1>
 * @author Timofey
 * @version 0.0.1
-* @sine 1.0
-* В документацию можно вписывать как в <b>html</b>
-* <img src="doc-files/enot.jpeg" alt="enot" /?>
+* @since 1.0
+* V documente mo)/(no pisat kak v <b>html</b>
+* <img src="doc-files/enot.jpeg" alt="enot">
 * */
 public class Main {
 
-    /*
-    *  Это моё поле и его зовут myField, он целочисленный
+    /**
+    *  Eto moyo pole myField, on celoe chislo
     *
     * */
     int myField;
 
-    /*
-    * Это стартовая точка программы
+    /**
+    * Eto starovaya tochka programi
     * @param args
     * */
     public static void main(String[] args) {
-
+        oldMethod();
+        newMethod();
     }
 
-    /*
-    * Этот метод вернёт i
-    * @param i целое число
-    * @param s строка
-    * @throws RuntimeException обработка ошибки
+    /**
+    * Etot metod vernet i
+    * @param i celoe chislo
+    * @param s stroka
+    * @throws RuntimeException oshibka
+     * @return i celoe chislo
     * */
     int getMyField(int i, String s) throws RuntimeException{
 
         return i;
     }
 
-    /*
-    * Старый метод
-    * @deprecated Используйте вместо него новый метод "newMethod"
+    /**
+    * stariy metod
+    * @deprecated ispolzuy metod @see Main#otherMetod
     * */
-    void oldMethod(){
+    static void oldMethod(){
         System.out.println("Устаревшие действия");
     }
 
-    /*
-     * Новый метод
-     * @see OtherClass#otherMetod
-     * @link OtherClass#otherMetod
+    /**
+     * nowiy metod
+     * @see OtherClass#otherMetod()
+     * Pereyti po ssilke {@link OtherClass#otherMetod()}
      * */
-    void newMethod(){
+    static void newMethod(){
         System.out.println("Новые действия");
+        OtherClass otherClass = new OtherClass();
+        otherClass.otherMetod();
     }
 }
